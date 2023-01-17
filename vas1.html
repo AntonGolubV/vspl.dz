@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        .container{ 
+            width: 200px; 
+            height: 200px; 
+            border: 1px solid black; 
+             
+        } 
+        .color_green{ 
+            background-color: chartreuse; 
+        } 
+        .color_red{ 
+            background-color: red; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+           
+    </div> 
+    <script> 
+        let cont = document.querySelector('.container'); 
+        cont.addEventListener('click', function(){ 
+            cont.classList.add('color_red'); 
+            cont.classList.remove('color_green'); 
+        }); 
+        cont.addEventListener('contextmenu', function(){ 
+            event.preventDefault();
+            cont.classList.remove('color_red'); 
+            cont.classList.add('color_green'); 
+        }); 
+    </script> 
+</body> 
+</html>

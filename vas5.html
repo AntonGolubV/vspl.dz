@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .startFrontEnd{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .endFrontEnd{
+            font-weight: bolder;
+        }
+        .startCss{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .endCss{
+            font-weight: bolder;
+        }
+        .startJavaScript{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .endJavaScript{
+            font-weight: bolder;
+        }
+        .startBackEnd{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .endBackEnd{
+            font-weight: bolder;
+        }
+        .startDataBase{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .endDataBase{
+            font-weight: bolder;
+        }
+        ul li{
+            list-style-type: none;
+            font-weight:normal;
+            margin-left: 10px;
+        }
+        ul{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="startFrontEnd"></ul>
+    <ul class="startBackEnd"></ul>
+    <ul class="startDataBase"></ul>
+    <script>
+        let FrontEnd = document.querySelector('.startFrontEnd');
+        FrontEnd.innerText = 'FrontEnd';
+
+        let BackEnd = document.querySelector('.startBackEnd');
+        BackEnd.innerText = 'BackEnd';
+
+        let DataBase = document.querySelector('.startDataBase');
+        DataBase.innerText = 'DataBase';
+
+        let Css = document.createElement('ul');
+        let Html;
+        let JavaScript = document.createElement('ul');
+        let Bootstrap;
+        let Less;
+        let Sass;
+        let JQuery;
+        let React;
+        let Angular;
+        let elPHP;
+        let elJAVA
+        let Python;
+        let elNODE_JS;
+        let Oracle;
+        let MySQL;
+        let Microsoft_SQL;
+        let countF = 1;
+        let countC = 1;
+        let countJ = 1;
+        let countB = 1;
+        let countD = 1;
+
+        FrontEnd.addEventListener('click', function firstUlOn(){
+                if(countF == 1){
+                FrontEnd.classList.add('endFrontEnd');
+
+                Html = document.createElement('li');
+                Html.innerText = 'Html';
+                FrontEnd.append(Html);
+
+                
+                Css.innerText = 'CSS'; 
+                Css.classList.add('startCss');
+                FrontEnd.append(Css);
+
+                
+                JavaScript.innerText = 'JavaScript';
+                JavaScript.classList.add('startJavaScript');
+                FrontEnd.append(JavaScript);
+                countF--;
+                }
+              
+                
+               
+        });
+
+        FrontEnd.addEventListener('contextmenu', function firstUlOff(){
+            if(countF == 0){
+                    Html.remove();
+                    Css.remove();
+                    JavaScript.remove();
+                    FrontEnd.classList.remove('endFrontEnd');  
+                }
+                event.preventDefault();
+                countF++;
+        });
+
+         Css.addEventListener('click', function SecondUlOn(){
+            if(countC == 1){
+                 Css.classList.add('endCss');
+
+            Bootstrap = document.createElement('li');
+                Bootstrap.innerText = 'Bootstrap';
+                Css.append(Bootstrap);
+
+            Less = document.createElement('li');
+                Less.innerText = 'LESS';
+                Css.append(Less);
+
+            Sass = document.createElement('li');
+                Sass.innerText = 'SASS';
+                Css.append(Sass);
+                countC--;
+            }
+           
+        });
+
+        Css.addEventListener('contextmenu', function SecondUlOff(){
+            if(countC == 0){
+                Bootstrap.remove();
+                Less.remove();
+                Sass.remove();
+                Css.classList.remove('endCss');
+                };
+                event.preventDefault();
+                event.stopPropagation();
+                countC++;
+        });
+        JavaScript.addEventListener('click', function TherdUlOn(){
+            if(countJ == 1){
+                JavaScript.classList.add('endJavaScript');
+
+                JQuery = document.createElement('li');
+                JQuery.innerText = 'JQuery';
+                JavaScript.append(JQuery);
+
+                React = document.createElement('li');
+                React.innerText = 'React';
+                JavaScript.append(React);
+
+                Angular = document.createElement('li');
+                Angular.innerText = 'Angular';
+                JavaScript.append(Angular);
+                countJ--;
+            }
+           
+        });
+
+        JavaScript.addEventListener('contextmenu', function TherdUlOff(){
+            if(countJ == 0){
+                JQuery.remove();
+                React.remove();
+                Angular.remove();
+                JavaScript.classList.remove('endJavaScript');
+                };
+                event.preventDefault();
+                event.stopPropagation();
+                countJ++;
+        });
+        BackEnd.addEventListener('click', function FourUlOn(){
+            if(countB == 1){
+                BackEnd.classList.add('endBackEnd');
+
+                elPHP = document.createElement('li');
+                elPHP.innerText = 'PHP';
+                BackEnd.append(elPHP);
+
+                elJAVA = document.createElement('li');
+                elJAVA.innerText = 'JAVA';
+                BackEnd.append(elJAVA);
+
+                Python = document.createElement('li');
+                Python.innerText = 'Python';
+                BackEnd.append(Python);
+
+                elNODE_JS = document.createElement('li');
+                elNODE_JS.innerText = 'NODE JS';
+                BackEnd.append(elNODE_JS);
+
+                countB--;
+            }
+           
+        });
+        BackEnd.addEventListener('contextmenu', function FourUlOff(){
+            if(countB == 0){
+                elPHP.remove();
+                elJAVA.remove();
+                Python.remove();
+                elNODE_JS.remove();
+                BackEnd.classList.remove('endBackEnd');
+                };
+                event.preventDefault();
+                event.stopPropagation();
+                countB++;
+        });
+        DataBase.addEventListener('click', function FiveUlOn(){
+            if(countD == 1){
+                DataBase.classList.add('endDataBase');
+
+                Oracle = document.createElement('li');
+                Oracle.innerText = 'Oracle';
+                DataBase.append(Oracle);
+
+                MySQL = document.createElement('li');
+                MySQL.innerText = 'MySQL ';
+                DataBase.append(MySQL);
+
+                Microsoft_SQL = document.createElement('li');
+                Microsoft_SQL.innerText = 'Microsoft SQL';
+                DataBase.append(Microsoft_SQL);
+
+                countD--;
+            }
+           
+        });
+        DataBase.addEventListener('contextmenu', function FiveUlOff(){
+            if(countD == 0){
+                Oracle.remove();
+                MySQL.remove();
+                MySQL.remove();
+                
+                DataBase.classList.remove('endDataBase');
+                };
+                event.preventDefault();
+                event.stopPropagation();
+                countD++;
+        });
+    </script>
+</body>
+</html>
